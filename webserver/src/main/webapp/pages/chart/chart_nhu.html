@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title> Chart </title>
+
+    <link rel="stylesheet" type="text/css" href="/webserver/component/header_footer.css" />
+    <link rel = "stylesheet" type = "text/css" href="chart_nhu.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rosario&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <div id="content">
+        <h1> Questionnaire Analysis </h1>
+
+        <div class="dropdownList">
+            <div class="selectBox">
+                <select class="selectInput" onchange="getAllSelect(this.id)" id="aca">
+                    <option name="aca" value=""> Academic Year </option>
+                </select>
+            </div>
+            <div class="selectBox">
+                <select class="selectInput" onchange="getAllSelect(this.id)" id="sem">
+                    <option name="sem" value=""> Semester </option>
+                </select>
+            </div>
+            <div class="selectBox">
+                <select class="selectInput" onchange="getAllSelect(this.id)" id="fa">
+                    <option name="fa" value=""> Faculty </option>
+                </select>
+            </div>
+            <div class="selectBox">
+                <select class="selectInput" onchange="getAllSelect(this.id)" id="pro">
+                    <option name="pro" value=""> Program </option>
+                </select>
+            </div>
+        </div>
+
+        <div class="dropdownList">
+            <div class="selectBox">
+                <select class="selectInput" onchange="getAllSelect(this.id)" id="mo">
+                    <option name="mod" value=""> Module </option>
+                </select>
+            </div>
+            <div class="selectBox">
+                <select class="selectInput" onchange="getAllSelect(this.id)" id="class">
+                    <option name="class" value=""> Class </option>
+                </select>
+            </div>
+            <div class="selectBox">
+                <select class="selectInput" onchange="getAllSelect(this.id)" id="lec">
+                    <option name="lec" value=""> Lecturer </option>
+                </select>
+            </div>
+        </div>
+
+        <div id="button">
+            <button id="visualizeButton"> Visualize </button>
+            <button id="resetButton"> Reset </button>
+        </div>
+
+        <div class="chartContainer" style></div>
+
+        <table class="answerTable">
+            <thead>
+                <tr>
+                    <th> Feedback Content </th>
+                </tr>
+            </thead>
+        </table>
+
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+            integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+            crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0/dist/chartjs-plugin-datalabels.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.9.4/jstat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-error-bars@1.2.1/build/Chart.ErrorBars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js" 
+    integrity="sha512-Meww2sXqNHxI1+5Dyh/9KAtvI9RZSA4c1K2k5iL02oiPO/RH3Q30L3M1albtqMg50u4gRTYdV4EXOQqXEI336A==" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="chart_nhu.js"></script>
+</body>
